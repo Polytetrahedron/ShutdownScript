@@ -50,6 +50,10 @@ class ShutdownServer():
             conn, addr = s.accept()
             print(f"Connection Accepted: Client {addr} connected!")
             t = Thread(target=self.handleClient, args=(conn,))
+    
+    def handleClient(self, conn):
+        # Need to make this more robust incase windows PC crashes.. because then I'd have to turn them all back on..
+        pass
 
 
 def runClient():
